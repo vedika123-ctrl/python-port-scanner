@@ -1,22 +1,30 @@
-import socket
+# 🔐 Python Network Port Scanner
 
-target = input("Enter target IP or website: ")
+This is a basic Cybersecurity project built using Python.
 
-print("Scanning target:", target)
-print("Please wait...")
+## 📌 About the Project
+This tool scans a target system and identifies open and closed ports.  
+Port scanning is an important step in cybersecurity and vulnerability assessment.
 
-ports = [21,22,23,25,53,80,110,139,143,443,445,8080]
+## 🚀 Features
+- Scans common ports
+- Detects open and closed ports
+- Uses Python socket programming
+- Beginner friendly cybersecurity project
 
-for port in ports:
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    socket.setdefaulttimeout(1)
-    result = s.connect_ex((target, port))
-    
-    if result == 0:
-        print("Port", port, "is OPEN")
-    else:
-        print("Port", port, "is CLOSED")
-    
-    s.close()
+## 🛠️ Technologies Used
+- Python
+- Socket Programming
+- Networking Basics
 
-print("Scanning completed.")
+## ▶️ How to Run
+1. Install Python
+2. Download the file `port_scanner.py`
+3. Run in terminal:
+   python port_scanner.py
+4. Enter any website or IP (example: google.com)
+
+## 🎯 Learning Outcome
+- Learned basics of networking
+- Understood how port scanning works
+- Gained hands-on experience in cybersecurity fundamentals
